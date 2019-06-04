@@ -201,7 +201,7 @@ Easy Project - administrator page
 <h1 align="center">Izmena konkursa:</h1>
 <fieldset>
 <table align="center" cellpadding="10px">
-<form name="ChangeInstitution" method="post" action="adminPageDB.php">
+<form name="ChangeCompetition" method="post" action="adminPageDB.php">
 <tr>
   <td align="right"><label>Unesi ID konkursa koji želite da izmenite:</label></td>
   <td colspan="3" align="left"><input type="text" name="compID2" size="3"></input></td>
@@ -409,6 +409,43 @@ while ($row1 = mysqli_fetch_array($query1)){
     function toPage_adminPageI(src) {
         window.location=src;
     }
+    
+    var input = document.querySelector('input[name="compID2"]');
+
+    var compName = document.querySelector('input[name="compNameNew"]');
+    var compType = document.querySelector('input[name="compTypeNew"]');
+    var compField = document.querySelector('input[name="compFieldNew"]');
+
+    
+    input.addEventListener('keyup',function () {
+
+        var search = {
+            "search" : input.value
+        };
+
+        if(input.value == '') {
+            compName.value = '';
+            compType.value = '';
+            compField.value = '';
+            return false;
+        }
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var responseJSON = JSON.parse(xhttp.responseText);
+                console.log(responseJSON);
+
+                compName.value = responseJSON.name_competition;
+                compType.value = responseJSON.type;
+                compField.value = responseJSON.field_of_activity;
+
+            }
+        };
+
+        xhttp.open("POST", "SearchCompDB.php", true);
+        xhttp.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+        xhttp.send('search='+JSON.stringify(search));
+    })
 
 </script>
 </body>

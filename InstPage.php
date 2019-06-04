@@ -33,85 +33,29 @@ if(!isset($_SESSION['u_id']))
 <input type="submit" name="back" value="Nazad">
 </form>
 <div id="institutions">
-    <form id="institutions">
-        <select name="institution" id="institution" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onchange="toPageCompetition(this.value)">
-            <option value="" selected>Ministarstvo kulture i informisanja</option>
-        <?php
+    <?php
+        $sql = "SELECT * FROM institution";
+        $query = mysqli_query($connection,$sql);
+        $results = mysqli_fetch_all($query,MYSQLI_ASSOC);
 
-            $sql = "SELECT * FROM competition WHERE id_institution = 1";
-            $query = mysqli_query($connection,$sql);
-            $results = mysqli_fetch_all($query,MYSQLI_ASSOC);
 
-            foreach ($results as $result) {
-                echo "<option value=\"Competition.php/#comp1\" id=\"opt\"'>- {$result['name_competition']}</option>";
+
+
+
+        foreach ($results as $result) {
+            echo "<select id='{$result['id_institution']}'>";
+            $id = (int)$result['id_institution'];
+            echo "<option value=''>{$result['name_institution']}</option>";
+
+            $sql2 = "SELECT name_competition,id_competition FROM competition WHERE id_institution = $id";
+            $query2 = mysqli_query($connection,$sql2);
+            $results2 = mysqli_fetch_all($query2,MYSQLI_ASSOC);
+            foreach ($results2 as $result2) {
+                echo "<option value='{$result2['id_competition']}'>{$result2['name_competition']}</option>";
             }
-        ?>
-        </select>
-
-        <select name="institution" id="institution" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onchange="toPageCompetition(this.value)">
-            <option value="" selected>Ministarstvo za omladinu i sport</option>
-            <option value="Competition.php/#comp1" id="opt"> - Konkurs iz oblasti vizuelnih umetnosti</option>
-            <option value="Competition.php/#comp2" id="opt"> - Konkurs za nacionalne manjine</option>
-            <option value="Competition.php/#comp3" id="opt"> - Konkurs za izdavanje časopisa</option>
-            <option value="Competition.php/#comp4" id="opt"> - Konkurs za mlade</option>
-        </select>
-
-        <select name="institution" id="institution" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onchange="toPageCompetition(this.value)">
-            <option value="" selected>Grad Subotica</option>
-            <option value="Competition.php/#comp1" id="opt"> - Konkurs iz oblasti vizuelnih umetnosti</option>
-            <option value="Competition.php/#comp2" id="opt"> - Konkurs za nacionalne manjine</option>
-            <option value="Competition.php/#comp3" id="opt"> - Konkurs za izdavanje časopisa</option>
-            <option value="Competition.php/#comp4" id="opt"> - Konkurs za mlade</option>
-        </select>
-
-        <select name="institution" id="institution" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onchange="toPageCompetition(this.value)">
-            <option value="" selected>Pokrajinski sekretarijat za kulturu</option>
-            <option value="Competition.php/#comp1" id="opt"> - Konkurs iz oblasti vizuelnih umetnosti</option>
-            <option value="Competition.php/#comp2" id="opt"> - Konkurs za nacionalne manjine</option>
-            <option value="Competition.php/#comp3" id="opt"> - Konkurs za izdavanje časopisa</option>
-            <option value="Competition.php/#comp4" id="opt"> - Konkurs za mlade</option>
-        </select>
-
-        <select name="institution" id="institution" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onchange="toPageCompetition(this.value)">
-              <option value="" selected>Pokrajinski sekretarijat za obrazovanje</option>
-                <option value="Competition.php/#comp1" id="opt"> - Konkurs iz oblasti vizuelnih umetnosti</option>
-                <option value="Competition.php/#comp2" id="opt"> - Konkurs za nacionalne manjine</option>
-                <option value="Competition.php/#comp3" id="opt"> - Konkurs za izdavanje časopisa</option>
-                <option value="Competition.php/#comp4" id="opt"> - Konkurs za mlade</option>
-        </select>
-
-         <select name="institution" id="institution" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onchange="toPageCompetition(this.value)">
-              <option value="" selected>Pokrajinski sekretarijat za poljoprivredu</option>
-              <option value="Competition.php/#comp1" id="opt"> - Konkurs iz oblasti vizuelnih umetnosti</option>
-              <option value="Competition.php/#comp2" id="opt"> - Konkurs za nacionalne manjine</option>
-              <option value="Competition.php/#comp3" id="opt"> - Konkurs za izdavanje časopisa</option>
-              <option value="Competition.php/#comp4" id="opt"> - Konkurs za mlade</option>
-         </select>
-
-         <select name="institution" id="institution" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onchange="toPageCompetition(this.value)">
-              <option value="" selected>Pokrajinski sekretarijat za privredu</option>
-              <option value="Competition.php/#comp1" id="opt"> - Konkurs iz oblasti vizuelnih umetnosti</option>
-              <option value="Competition.php/#comp2" id="opt"> - Konkurs za nacionalne manjine</option>
-              <option value="Competition.php/#comp3" id="opt"> - Konkurs za izdavanje časopisa</option>
-              <option value="Competition.php/#comp4" id="opt"> - Konkurs za mlade</option>
-         </select>
-
-        <select name="institution" id="institution" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onchange="toPageCompetition(this.value)">
-            <option value="" selected>Friedrich Ebert Stiftung</option>
-            <option value="Competition.php/#comp1" id="opt"> - Konkurs iz oblasti vizuelnih umetnosti</option>
-            <option value="Competition.php/#comp2" id="opt"> - Konkurs za nacionalne manjine</option>
-            <option value="Competition.php/#comp3" id="opt"> - Konkurs za izdavanje časopisa</option>
-            <option value="Competition.php/#comp4" id="opt"> - Konkurs za mlade</option>
-        </select>
-
-        <select name="institution" id="institution" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" onchange="toPageCompetition(this.value)">
-            <option value="" selected>Fond za otvoreno društvo</option>
-            <option value="Competition.php/#comp1" id="opt"> - Konkurs iz oblasti vizuelnih umetnosti</option>
-            <option value="Competition.php/#comp2" id="opt"> - Konkurs za nacionalne manjine</option>
-            <option value="Competition.php/#comp3" id="opt"> - Konkurs za izdavanje časopisa</option>
-            <option value="Competition.php/#comp4" id="opt"> - Konkurs za mlade</option>
-        </select>
-    </form>
+            echo "</select><br>";
+        }
+    ?>
 </div>
 
 <script>
