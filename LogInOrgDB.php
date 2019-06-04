@@ -13,7 +13,7 @@ if(isset($_POST['log'])) {
 			header("Location:LogInOrg.php?login=empty");
 	        exit();
 	} else {
-		$sql = "SELECT email, password FROM organization WHERE email='$email';";
+		$sql = "SELECT email, password,id_organization FROM organization WHERE email='$email';";
 		$result = mysqli_query($connection, $sql);
 		$resultCheck = mysqli_num_rows($result);
 		if ($resultCheck < 1){
@@ -29,6 +29,7 @@ if(isset($_POST['log'])) {
 				} elseif ($hashedPwdCheck == true){
 					//Log in here
 					$_SESSION['u_id'] = $row['email'];
+					$_SESSION['org_name'] = $row['id_organization'];
 					header("Location:OrgPageBlocker.php?login=success");
 	                exit();
 				}
