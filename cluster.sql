@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 30, 2019 at 11:11 AM
+-- Generation Time: Jun 04, 2019 at 04:21 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -41,7 +41,6 @@ CREATE TABLE IF NOT EXISTS `administrator` (
 --
 
 INSERT INTO `administrator` (`id_admin`, `username`, `password`) VALUES
-(1, 'neso', 'neso'),
 (2, 'nenad', '$2y$10$pY5/FOgJJTqu3HlX/naGweZP0BYfl00gc7PBwezHCDUOJIJZO4gbG');
 
 -- --------------------------------------------------------
@@ -58,14 +57,17 @@ CREATE TABLE IF NOT EXISTS `assignments` (
   PRIMARY KEY (`id`),
   KEY `id_organization` (`id_organization`),
   KEY `id_competition` (`id_competition`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `assignments`
 --
 
 INSERT INTO `assignments` (`id`, `id_organization`, `id_competition`) VALUES
-(1, 7, 1);
+(1, 7, 1),
+(3, 9, 3),
+(4, 8, 4),
+(5, 10, 2);
 
 -- --------------------------------------------------------
 
@@ -82,7 +84,7 @@ CREATE TABLE IF NOT EXISTS `competition` (
   `field_of_activity` text COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id_competition`),
   KEY `id_institution` (`id_institution`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumping data for table `competition`
@@ -94,8 +96,7 @@ INSERT INTO `competition` (`id_competition`, `id_institution`, `name_competition
 (3, 1, 'Konkurs za izdavanje časopisa', 'gdgfdg', 'fdgfdgfdgfdg'),
 (4, 1, 'Konkurs za mlade', 'fff', 'gfgffgfg'),
 (5, 2, 'Konkurs iz oblasti vizuelnih umetnosti', 'bnnvbnvb', 'nm,m,mnj'),
-(6, 3, 'Konkurs iz oblasti vizuelnih umetnosti', 'fdgfdgfgd', 'fdgfdgfdg'),
-(9, 1, 'kk', '', '');
+(6, 3, 'Konkurs iz oblasti vizuelnih umetnosti', 'fdgfdgfgd', 'fdgfdgfdg');
 
 -- --------------------------------------------------------
 
@@ -140,7 +141,7 @@ CREATE TABLE IF NOT EXISTS `organization` (
   `number_id` int(11) NOT NULL,
   `tax_number` int(11) NOT NULL,
   PRIMARY KEY (`id_organization`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumping data for table `organization`
@@ -149,7 +150,9 @@ CREATE TABLE IF NOT EXISTS `organization` (
 INSERT INTO `organization` (`id_organization`, `email`, `password`, `name_organization`, `number_id`, `tax_number`) VALUES
 (7, 'neso@gmail.com', '$2y$10$G0NuK3INLTcTIn1qTgR0lOVR3U/UjlENb5uh4BfKy4dcPbBBBrr2q', 'NesoOrg', 123254, 345465),
 (8, 'dubro@mail.com', '$2y$10$JqU5UDTpW4uL.5C2jE9mrOp.fu/lZeboEGTDXFwQgPiSB0gXX4Vdu', 'DubroInc', 55656, 678678),
-(9, 'joja@mail.com', '$2y$10$9V3leWoW1P.d7sZgxP894uGze2uv/PISaN08WlwJ/ZR78qcmrekoG', 'jojaInc', 65643, 76766);
+(9, 'joja@mail.com', '$2y$10$9V3leWoW1P.d7sZgxP894uGze2uv/PISaN08WlwJ/ZR78qcmrekoG', 'jojaInc', 65643, 76766),
+(10, 'dragica@mail.com', '$2y$10$9cXILRT/o5eBWrAHz1hTAOgr9VlDXO4YR0qFlWDt2YAtea3WOdzoO', 'DragicaCo', 5465465, 8767678),
+(11, 'tanja@mail.com', '$2y$10$cxMCwdzm.1TTpNwoErf8c.KJAGtZmuuWkXmMECFHx6/yqQ0tECOMi', 'MissIT', 34534534, 565756756);
 
 --
 -- Constraints for dumped tables
