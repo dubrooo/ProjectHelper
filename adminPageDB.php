@@ -39,8 +39,9 @@ if(isset($_POST['addC'])) {
     $compName = $_POST['compName'];
 	$compType = $_POST['compType'];
 	$compField = $_POST['compField'];
+	$compDesc = $_POST['compDesc'];
 
-    $sql3 = "INSERT INTO `competition` (id_institution,name_competition,type,field_of_activity) VALUES('$instID','$compName','$compType','$compField');";
+    $sql3 = "INSERT INTO `competition` (id_institution,name_competition,type,field_of_activity,description) VALUES('$instID','$compName','$compType','$compField','$compDesc');";
     $query3 = mysqli_query($connection,$sql3);
 	
 }

@@ -10,7 +10,7 @@ if(!isset($_SESSION['u_id']))
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MainPage</title>
+    <title>InstPage</title>
     <style>
         #institutions{
             margin-left: 20%;
@@ -32,18 +32,21 @@ if(!isset($_SESSION['u_id']))
 <form method="post" action="adminPageI.php">
 <input type="submit" name="back" value="Nazad">
 </form>
+
+<table align="center">
+<tr>
+<th align="center"><h1>Detaljniji pregled</h1></th>
+</tr>
+
 <div id="institutions">
     <?php
         $sql = "SELECT * FROM institution";
         $query = mysqli_query($connection,$sql);
         $results = mysqli_fetch_all($query,MYSQLI_ASSOC);
 
-
-
-
-
         foreach ($results as $result) {
-            echo "<select id='{$result['id_institution']}'>";
+			echo "<tr><td>";
+            echo "<select id='{$result['id_institution']}' style='width:300px;'>";
             $id = (int)$result['id_institution'];
             echo "<option value=''>{$result['name_institution']}</option>";
 
@@ -53,10 +56,13 @@ if(!isset($_SESSION['u_id']))
             foreach ($results2 as $result2) {
                 echo "<option value='{$result2['id_competition']}'>{$result2['name_competition']}</option>";
             }
-            echo "</select><br>";
+            echo "</select></td></tr><tr><td height='10px'></td></tr>";
         }
     ?>
 </div>
+</td>
+</tr>
+</table>
 
 <script>
 

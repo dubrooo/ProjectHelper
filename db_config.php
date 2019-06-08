@@ -1,7 +1,7 @@
 <?php
 
 $host = "localhost";
-$username = "dubro";
+$username = "root";
 $password = "";
 $db = "cluster";
 

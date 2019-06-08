@@ -166,6 +166,9 @@ Easy Project - administrator page
   <td align="right"><label>Polje rada:</label></td>
   <td><input type="text" name="compField"></input></td>
 </tr><tr>
+  <td align="right"><label>Opis:</label></td>
+  <td><textarea name="compDesc" rows="4" cols="50" style="resize:none;"></textarea></td>
+</tr><tr>
   <td colspan="2" align="right"><input type="submit" name="addC" value="Dodaj novi konkurs"></input>
   <input type="reset" name="cancel" value="Odbaci"></input></td>
 </form>
