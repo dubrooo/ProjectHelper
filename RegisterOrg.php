@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <title>Registracija (Easy Project)</title>
+<link type="text/css" rel="stylesheet" href="RegisterOrg.css">
 </head>
 <style type="text/css">
     div#warning {
@@ -44,10 +45,12 @@
 
     }
 </script>
-<h1>Registrujte Vašu organizaciju</h1>
+<div class="titleBar">
+<h1 align="center">Registrujte Vašu organizaciju</h1>
+</div>
 
 <!--Register form-->
-<table border="1">
+<table border="1" align="center">
 <form name="regOrg" method="post" action="AddOrgDB.php" onsubmit="return checkIt();">
 <tr>
 <td align="right"><label>Email:</label></td>
@@ -80,7 +83,11 @@
 </table>
 <div id="warning"></div>
 <br>
+<table align="center">
+<tr><td>
 <a href="Main.php">Nazad</a>
+</td></tr>
+</table>
 
 </body>
 </html>

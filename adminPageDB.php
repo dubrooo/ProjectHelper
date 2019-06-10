@@ -92,7 +92,7 @@ if(isset($_POST['assignC'])) {
 	$IDOrg = $_POST['IDOrg'];
     $IDSComp = $_POST['IDSComp'];
 
-    $sqlA = "INSERT INTO `assignments` (id_organization,id_short_competition) VALUES('$IDOrg','$IDSComp');";
+    $sqlA = "INSERT INTO `assignments` (id_organization,id_short_competition,status) VALUES('$IDOrg','$IDSComp',' ');";
     $queryA = mysqli_query($connection,$sqlA);
 }
 
