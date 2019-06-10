@@ -5,8 +5,11 @@
     <title>Create admin</title>
    </head>
 <style type="text/css">
-    body {
+    body{
         font-family: Calibri;
+        color: #57616a;
+        margin: 0;
+        background-color: #c8dfff;
     }
     div#warning {
         display: inline;
@@ -22,19 +25,27 @@
 
 <table align="center">
 <form name="createLog" method="post" action="AdminSignup.php" onsubmit="return checkIt();">
-<tr>
+    <tr>
 <td align="center" colspan="2"><h1>Create</h1></td>
-</tr><tr>
+    </tr>
+    <tr>
 <td><label>Username:</label></td>
 <td><input type="text" name="admUser"></td>
-</tr><tr>
+    </tr>
+    <tr>
 <td><label>Password:</label></td>
 <td><input type="password" name="admPassword"></td>
-</tr><tr>
-<td height="20px" colspan="2"><div id="warning"></div></td>
-</tr><tr>
-<td colspan="2" align="center"><input type="submit" name="submitAdmin" value="Create">
-<input type="reset" name="reset" value="Cancel"></td>
+    </tr>
+    <tr>
+<td></td>
+<td height="20px"><div id="warning"></div></td>
+    </tr>
+    <tr>
+<td></td>
+<td align="center">
+    <input type="submit" name="submitAdmin" value="Create">
+    <input type="reset" name="reset" value="Cancel">
+</td>
 </tr>
 </form>
 </table>

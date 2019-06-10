@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d284a0c-43c9-4fd0-8d91-ad39e886bbe3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InstPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/InstPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreateAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/CreateAdmin.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adminPageII.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="26" column="5" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
+            <state relative-caret-position="306">
+              <caret line="18" column="34" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="18" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -30,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adminLoginForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
+            <state relative-caret-position="408">
               <caret line="27" column="21" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="21" />
             </state>
           </provider>
@@ -54,23 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CreateAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="29" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/InstPage.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="73" column="47" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
-              <folding>
-                <element signature="n#style#0;n#select#0;n#!!top" expanded="true" />
-              </folding>
+            <state>
+              <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -106,13 +93,13 @@
         <option value="$PROJECT_DIR$/AdminSignup.php" />
         <option value="$PROJECT_DIR$/adminLogin.php" />
         <option value="$PROJECT_DIR$/adminLoginForm.php" />
-        <option value="$PROJECT_DIR$/CreateAdmin.php" />
         <option value="$PROJECT_DIR$/adminCreateAndLog.js" />
         <option value="$PROJECT_DIR$/RegisterOrg.php" />
         <option value="$PROJECT_DIR$/adminPageII.php" />
         <option value="$PROJECT_DIR$/adminPageII.js" />
         <option value="$PROJECT_DIR$/Competition.css" />
         <option value="$PROJECT_DIR$/InstPage.php" />
+        <option value="$PROJECT_DIR$/CreateAdmin.php" />
       </list>
     </option>
   </component>
@@ -182,12 +169,12 @@
       <workItem from="1560166599693" duration="621000" />
       <workItem from="1560167595980" duration="11204000" />
       <workItem from="1560180278492" duration="1233000" />
-      <workItem from="1560192623174" duration="2893000" />
+      <workItem from="1560192623174" duration="4608000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65348000" />
+    <option name="totallyTimeSpent" value="67063000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="653" height="687" extended-state="0" />
@@ -371,13 +358,6 @@
     <entry file="file://$PROJECT_DIR$/CompetitionDB.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CreateAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LogInOrgDB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -393,13 +373,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OrgCancelsComp.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/adminLoginForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="21" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OrgPageBlocker.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -446,6 +419,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/InstPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="73" column="47" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
+          <folding>
+            <element signature="n#style#0;n#select#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adminLoginForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adminPageII.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="34" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="18" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/OrgPage.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -453,20 +450,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adminPageII.php">
+    <entry file="file://$PROJECT_DIR$/CreateAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="26" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/InstPage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="73" column="47" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
-          <folding>
-            <element signature="n#style#0;n#select#0;n#!!top" expanded="true" />
-          </folding>
+        <state>
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
         </state>
       </provider>
     </entry>
