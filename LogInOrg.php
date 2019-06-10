@@ -2,14 +2,8 @@
 <html lang="en">
 <head>
 <title>Log In (Easy Project)</title>
+<link type="text/css" rel="stylesheet" href="LogInOrg.css">
 </head>
-<style type="text/css">
-    div#warning {
-        display: inline;
-        color: #FF5A36;
-        font-weight: bolder;
-    }
-</style>
 <body>
 <script>
     function checkIt() {
@@ -29,10 +23,19 @@
     }
 </script>
 <!--Logging form-->
-<h1>Logovanje:</h1>
-<table border="1">
+<div class="titleBar">
+<h1 align="center">Logovanje:</h1>
+</div>
+
+<table align="center">
+<tr>
+<td height="50px"></td>
+</tr>
 <form name="logIn" method="post" action="LogInOrgDB.php" onsubmit="return checkIt();">
 <tr>
+<tr>
+<th colspan="2"><h3>Unesite Vaše podatke:</h3></th>
+</tr>
 <td align="right"><label>Email:</label></td>
 <td><input type="email" name="orgEmail"></td>
 </tr>
@@ -43,14 +46,29 @@
 <tr>
 <td></td>
 <td>
-<input type="submit" name="log" value="Log In">
-<input type="reset" name="cancel" value="Poništi">
+<input type="submit" name="log" id="button" value="Log In">
+<input type="reset" name="cancel" id="button" value="Poništi">
+</td></tr>
+<tr>
+<td colspan="2" height="30px" align="center">
+<div id="warning"></div>
 </td>
 </tr>
+<tr>
+
 </form>
 </table>
-<div id="warning"></div>
+
 <br>
-<a href="Main.php">Nazad</a>
+<table align="center">
+<tr><td height="50px"></td></tr>
+<tr><td>
+<form method="post" action="Main.php">
+<div id="back">
+    <input type="submit" name="back" id="button" value="Nazad">
+</div>
+</td></tr>
+</form>
+</table>
 </body>
 </html>

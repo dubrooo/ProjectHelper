@@ -1,0 +1,19 @@
+        body{
+            font-family: Calibri;
+            color: #57616a;
+            margin: 0;
+            background-color: #c8dfff;
+
+        }
+        #table{
+            margin-top: 3%;
+        }
+        #back{
+            margin-top: 3%;
+            display: flex;
+            justify-content: center;
+        }
+        #button:hover{
+            background: #186cde;
+            color: #ffffff;
+        }

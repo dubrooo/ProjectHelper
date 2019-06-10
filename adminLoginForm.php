@@ -8,6 +8,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>Log in admin</title>
+	<link type="text/css" rel="stylesheet" href="adminLoginForm.css">
    </head>
 <style type="text/css">
     body {

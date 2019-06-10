@@ -11,31 +11,9 @@ if(!isset($_SESSION['u_id']))
 <head>
     <meta charset="UTF-8">
     <title>InstPage</title>
-    <style>
-        body{
-            font-family: Calibri;
-            color: #57616a;
-            margin: 0;
-            background-color: #c8dfff;
-
-        }
-        #table{
-            margin-top: 3%;
-        }
-        #back{
-            margin-top: 3%;
-            display: flex;
-            justify-content: center;
-        }
-        #button:hover{
-            background: #186cde;
-            color: #ffffff;
-        }
-    </style>
+<link type="text/css" rel="stylesheet" href="InstPage.css">
 </head>
 <body>
-
-<form method="post" action="adminPageI.php"></form>
 
 <div id="table">
     <table align="center">
@@ -51,9 +29,9 @@ if(!isset($_SESSION['u_id']))
 
         foreach ($results as $result) {
 			echo "<tr><td>";
-            echo "<select id='{$result['id_institution']}' style='width:300px;'>";
+            echo "<select id='{$result['id_institution']}' style='width:300px; height:30px; font-weight:bold;' onmouseover='mouseOver(this)' onmouseout='mouseOut(this)'>";
             $id = (int)$result['id_institution'];
-            echo "<option value=''>{$result['name_institution']}</option>";
+            echo "<option value=''><b>{$result['name_institution']}</b></option>";
 
             $sql2 = "SELECT name_competition,id_competition FROM competition WHERE id_institution = $id";
             $query2 = mysqli_query($connection,$sql2);
@@ -70,9 +48,11 @@ if(!isset($_SESSION['u_id']))
 </tr>
 </table>
 </div>
+<form method="post" action="adminPageI.php">
 <div id="back">
     <input type="submit" name="back" id="button" value="Nazad">
 </div>
+</form>
 
 <script>
 
@@ -93,6 +73,11 @@ if(!isset($_SESSION['u_id']))
 		var id = e.target.value;
 		window.location = 'Competition.php?id='+id;
 	});
+	
+function mouseOver(obj)
+{
+    obj.style.backgroundColor = "#a1ecce";
+}
 
 </script>
 

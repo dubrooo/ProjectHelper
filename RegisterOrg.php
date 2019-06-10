@@ -87,14 +87,24 @@
 <input type="reset" name="orgReset" id="button" value="Poništi">
 </td>
 </tr>
+<tr>
+<td colspan="2" height="30px" align="center">
+<div id="warning"></div>
+</td>
+</tr>
 </form>
 </table>
-<div id="warning"></div>
+
 <br>
 <table align="center">
+<tr><td height="50px"></td></tr>
 <tr><td>
-<a href="Main.php">Nazad</a>
+<form method="post" action="Main.php">
+<div id="back">
+    <input type="submit" name="back" id="button" value="Nazad">
+</div>
 </td></tr>
+</form>
 </table>
 
 </body>

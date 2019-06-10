@@ -2,18 +2,26 @@
 <html lang="en">
 <head>
 <title>Vaši konkursi (Easy Project)</title>
+<link type="text/css" rel="stylesheet" href="OrgPage.css">
 </head>
 <body>
 
+<div class="titleBar">
 <h1 align="center">Ovo su Vaši konkursi</h1>
+</div>
 
-<table align="right" border="1"><tr><td>
+<table align="right"><tr><td>
 <form method="post" action="LogoutOrgDB.php">
-<input type="submit" name="logout" value="Log Out">
+<input type="submit" name="logout" id="button" value="Log Out">
 </form>
 </td></tr></table>
 
 <!--Table with active competitions. Organization can cancel any active competition-->
+<table align="center">
+<tr><td height="40px"></td></tr>
+</table>
+
+<div class="tableDiv">
 <table align="center" border="1">
 <tr>
 <th width="300px" colspan="7"><h2>Aktivni konkursi</h2></th>
@@ -45,17 +53,26 @@ while ($row1 = mysqli_fetch_array($query)){
 	echo "<td align=\"center\"><a href='shortComp/" . $row1['documentation'] . "'>" . $row1['documentation'] . "</a></td>";
 	echo "<td align=\"center\">
 	<form action=\"OrgCancelsComp.php\" method=\"POST\">
-	<select name=\"statusC\" id=\"statusC\">
+	<select name=\"statusC\" id=\"statusC\" onmouseover='mouseOver(this)' onmouseout='mouseOut(this)'>
 	<option value=\"\">-Izaberi-</option>
 	<option value=\"accepted\">Prihvaćam</option>
 	<option value=\"rejected\">Odbijam</option>
 	</select>
-	<br><br><button type=\"submit\" name=\"cancelComp\" value=\"{$row1['id_short_competition']}\">Pošalji</button>
+	<br><br><button type=\"submit\" name=\"cancelComp\" id=\"button\" value=\"{$row1['id_short_competition']}\">Pošalji</button>
 	</form>
 	</td>";
 	echo "<td align=\"center\">" . $row1['status'] . "</td>";
 	echo "</tr>";
 }
 ?>
+</div>
+
+<script>
+    function mouseOver(obj)
+    {
+        obj.style.backgroundColor = "#a1ecce";
+    }
+</script>
+
 </table>
 

@@ -10,35 +10,8 @@ if(!isset($_SESSION['u_id']))
 <head>
     <meta charset="UTF-8">
     <title>Administrator</title>
+	<link type="text/css" rel="stylesheet" href="adminPageII.css">
    </head>
-<style type="text/css">
-    body{
-        font-family: Calibri;
-        color: #57616a;
-        margin: 0;
-        background-color: #c8dfff;
-    }
-    fieldset{
-        background-color: #ffffff;
-    }
-    #button:hover{
-        background: #186cde;
-        color: #ffffff;
-    }
-    #button{
-        background: #ffffff;
-    }
-    .topbar{
-        width 100%;
-        margin: 0 auto;
-        height: 70px;
-        background-color: #186cde;
-        position: sticky;
-        top: 0;
-        color: white;
-        font-weight: bold;
-    }
-</style>
 <body>
 
 <!--Header and logout button-->
@@ -46,7 +19,7 @@ if(!isset($_SESSION['u_id']))
 <table>
 <tr>
 <td colspan="2">
-Easy Project - administrator page
+Easy Project - admin page
 </td>
 <td rowspan="2" width="400px"></td>
 <td rowspan="2">
@@ -315,8 +288,10 @@ Easy Project - administrator page
 </div>
 <br><br>
 
-<!--Imported data from `institution` table-->
 
+
+<!--Imported data from `institution` table-->
+<div class="tableDiv">
 <div id="inst">
 <br><br><br>
 <h1 align="center">Prijavljene institucije</h1>
@@ -488,6 +463,7 @@ while ($row1 = mysqli_fetch_array($query1)){
 };
 ?>
 </table>
+</div>
 </div>
 
 <script>
