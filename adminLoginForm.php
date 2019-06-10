@@ -11,9 +11,9 @@ session_start();
    </head>
 <style type="text/css">
     body {
-        font-family: Arial;
+        font-family: Bahnschrift SemiLight;
     }
-    
+
     div#warning {
         display: inline;
         color: #FF5A36;
