@@ -37,7 +37,7 @@ if(!isset($_SESSION['u_id']))
 <tr>
 <th align="center"><h1>Detaljniji pregled</h1></th>
 </tr>
-
+<form name="selectComp" method="POST" action="Competition.php">
 <div id="institutions">
     <?php
         $sql = "SELECT * FROM institution";
@@ -60,6 +60,7 @@ if(!isset($_SESSION['u_id']))
         }
     ?>
 </div>
+</form>
 </td>
 </tr>
 </table>
@@ -78,6 +79,11 @@ if(!isset($_SESSION['u_id']))
     function toPageCompetition(src) {
         window.location=src;
     }
+	addEventListener('change',function(e){
+		console.log(e.target.value);
+		var id = e.target.value;
+		window.location = 'Competition.php?id='+id;
+	});
 
 </script>
 

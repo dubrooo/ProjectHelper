@@ -6,7 +6,7 @@
 <body>
 <!--Logging form-->
 <h1>Logovanje:</h1>
-<table border="1">
+<table>
 <form method="post" action="LogInOrgDB.php">
 <tr>
 <td align="right"><label>Email:</label></td>

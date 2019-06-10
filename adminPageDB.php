@@ -8,8 +8,10 @@ require "db_config.php";
 //Add a new institution
 if(isset($_POST['addI'])) {
     $instName = $_POST['instName'];
+	$instEmail = $_POST['instEmail'];
+	$instAddress = $_POST['instAddress'];
 
-    $sql = "INSERT INTO `institution` (name_institution) VALUES('$instName');";
+    $sql = "INSERT INTO `institution` (name_institution,email,address) VALUES('$instName','$instEmail','$instAddress');";
     $query = mysqli_query($connection,$sql);
 	
 }
@@ -27,9 +29,17 @@ if(isset($_POST['changeI'])) {
     $instID2 = $_POST['instID2'];
 	
     $instNameNew = $_POST['instNameNew'];
+	$instEmailNew = $_POST['instEmailNew'];
+	$instAddressNew = $_POST['instAddressNew'];
 	
 	$sqlNewName = "UPDATE institution SET name_institution = '$instNameNew' WHERE institution.id_institution = '$instID2';";
 	$queryNewName = mysqli_query($connection,$sqlNewName);
+	
+	$sqlNewEmail = "UPDATE institution SET email = '$instEmailNew' WHERE institution.id_institution = '$instID2';";
+	$queryNewEmail = mysqli_query($connection,$sqlNewEmail);
+	
+	$sqlNewAddress = "UPDATE institution SET address = '$instAddressNew' WHERE institution.id_institution = '$instID2';";
+	$queryNewAddress = mysqli_query($connection,$sqlNewAddress);
 	
 }
 
@@ -61,6 +71,7 @@ if(isset($_POST['changeC'])) {
     $compNameNew = $_POST['compNameNew'];
 	$compTypeNew = $_POST['compTypeNew'];
 	$compFieldNew = $_POST['compFieldNew'];
+	$compDescNew = $_POST['compDescNew'];
 	
 	$sqlNewName2 = "UPDATE competition SET name_competition = '$compNameNew' WHERE competition.id_competition = '$compID2';";
 	$queryNewName2 = mysqli_query($connection,$sqlNewName2);
@@ -70,17 +81,19 @@ if(isset($_POST['changeC'])) {
 	
 	$sqlNewField = "UPDATE competition SET field_of_activity = '$compFieldNew' WHERE competition.id_competition = '$compID2';";
 	$queryNewField = mysqli_query($connection,$sqlNewField);
+	
+	$sqlNewDesc = "UPDATE competition SET description = '$compDescNew' WHERE competition.id_competition = '$compID2';";
+	$queryNewDesc = mysqli_query($connection,$sqlNewDesc);
 
 }
 
 //Assign competition to organization
 if(isset($_POST['assignC'])) {
 	$IDOrg = $_POST['IDOrg'];
-    $IDComp = $_POST['IDComp'];
+    $IDSComp = $_POST['IDSComp'];
 
-    $sqlA = "INSERT INTO `assignments` (id_organization,id_competition) VALUES('$IDOrg','$IDComp');";
+    $sqlA = "INSERT INTO `assignments` (id_organization,id_short_competition) VALUES('$IDOrg','$IDSComp');";
     $queryA = mysqli_query($connection,$sqlA);
-	
 }
 
 //Delete assignment
