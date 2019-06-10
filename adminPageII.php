@@ -59,6 +59,7 @@ Easy Project - administrator page
             <option value="#inst" id="opt">Institucije</option>
             <option value="#org" id="opt">Organizacije</option>
 			<option value="#comp" id="opt">Objavljenih konkursa</option>
+			<option value="#shortComp" id="opt">Skraćenih konkursa</option>
 			<option value="#assi" id="opt">Dodeljenih konkursa</option>
 
         </select>
