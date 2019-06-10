@@ -14,10 +14,12 @@ if(!isset($_SESSION['u_id']))
 
 </head>
 <body>
+<div class="topbar">
+    <form method="post" action="InstPage.php">
+        <input type="submit" id="button" name="back" value="Nazad">
+    </form>
+</div>
 
-<form method="post" action="InstPage.php">
-<input type="submit" name="back" value="Nazad">
-</form>
 
 <!--Imported data from `competition` table-->
 <div id="instComp">
@@ -51,10 +53,10 @@ $row1 = mysqli_fetch_array($query1);
 <form name="AddSCompetition" method="post" action="CompetitionDB.php">
 <tr>
   <td align="right"><label>ID konkursa:</label></td>
-  <td><input type="text" name="IDComp"></input></td>
+  <td><input type="text" name="IDComp"></td>
 </tr><tr>
   <td align="right"><label>Rok:</label></td>
-  <td><input type="text" name="deadline"></input></td>
+  <td><input type="text" name="deadline"></td>
 </tr><tr>
   <td align="right"><label>Način slanja:</label></td>
   <td><select name="sendType" id="sendType">
@@ -66,10 +68,11 @@ $row1 = mysqli_fetch_array($query1);
         </select></td>
 </tr><tr>
   <td align="right"><label>Dokumentacija (tačan naziv fajla i ekstenzija):</label></td>
-  <td><input type="text" name="docum"></input></td>
+  <td><input type="text" name="docum"></td>
 </tr><tr>
-  <td colspan="2" align="right"><input type="submit" name="addSC" value="Skrati konkurs"></input>
-  <input type="reset" name="cancel" value="Odbaci"></input></td>
+  <td colspan="2" align="right">
+      <input type="submit" id="button" name="addSC" value="Skrati konkurs">
+      <input type="reset" id="button" name="cancel" value="Odbaci"></td>
 </form>
 </table>
 </fieldset>
@@ -86,10 +89,11 @@ $row1 = mysqli_fetch_array($query1);
 <form name="DeleteSCompetition" method="post" action="CompetitionDB.php">
 <tr>
   <td align="right"><label>ID konkursa:</label></td>
-  <td><input type="text" name="SCID" size="3"></input></td>
+  <td><input type="text" name="SCID" size="3"></td>
 </tr><tr>
-  <td colspan="2" align="right"><input type="submit" name="deleteSC" value="Izbriši"></input>
-  <input type="reset" name="cancel2" value="Odbaci"></input></td>
+  <td colspan="2" align="right">
+      <input type="submit" id="button" name="deleteSC" value="Izbriši">
+      <input type="reset" id="button" name="cancel2" value="Odbaci"></td>
 </form>
 </table>
 </fieldset>
@@ -106,12 +110,13 @@ $row1 = mysqli_fetch_array($query1);
 <form name="ChangeSCompetition" method="post" action="CompetitionDB.php">
 <tr>
   <td align="right"><label>Unesite ID skraćenog konkursa koji želite da izmenite:</label></td>
-  <td colspan="3" align="left"><input type="text" name="SCID2" size="3"></input></td>
+  <td colspan="3" align="left">
+      <input type="text" name="SCID2" size="3"></td>
 </tr><tr>
 <td colspan="3" height="20px"></td>
 </tr><tr>
     <td align="right"><label>Novi rok:</label></td>
-  <td><input type="text" name="ScompDeadlineNew"></input></td>
+  <td><input type="text" name="ScompDeadlineNew"></td>
   </tr><tr>
     <td align="right"><label>Način slanja:</label></td>
   <td><select name="ScompSendTypeNew">
@@ -123,10 +128,11 @@ $row1 = mysqli_fetch_array($query1);
         </select></td>
 		</tr><tr>
       <td align="right"><label>Izmena dokumentacije:</label></td>
-  <td><input type="text" name="ScompDocumNew"></input></td>
+  <td><input type="text" name="ScompDocumNew"></td>
   </tr><tr>
-  <td colspan="3" align="right"><input type="submit" name="changeSC" value="Izmeni"></input>
-  <input type="reset" name="cancel3" value="Odbaci"></input></td>
+  <td colspan="3" align="right">
+      <input type="submit" id="button" name="changeSC" value="Izmeni">
+      <input type="reset" id="button" name="cancel3" value="Odbaci"></td>
 </form>
 </table>
 </fieldset>
