@@ -12,33 +12,38 @@ if(!isset($_SESSION['u_id']))
     <meta charset="UTF-8">
     <title>InstPage</title>
     <style>
-        #institutions{
-            margin-left: 20%;
-            margin-right: 20%;
-            margin-bottom: 60px;
-        }
-        #institution{
-            margin-left: 10%;
-            margin-top: 60px;
-            font-size: xx-large;
-        }
-        #opt{
-            font-size: large;
-        }
+        body{
+            font-family: Calibri;
+            color: #57616a;
+            margin: 0;
+            background-color: #c8dfff;
 
+        }
+        #table{
+            margin-top: 3%;
+        }
+        #back{
+            margin-top: 3%;
+            display: flex;
+            justify-content: center;
+        }
+        #button:hover{
+            background: #186cde;
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
-<form method="post" action="adminPageI.php">
-<input type="submit" name="back" value="Nazad">
-</form>
 
-<table align="center">
+<form method="post" action="adminPageI.php"></form>
+
+<div id="table">
+    <table align="center">
 <tr>
 <th align="center"><h1>Detaljniji pregled</h1></th>
 </tr>
 <form name="selectComp" method="POST" action="Competition.php">
-<div id="institutions">
+
     <?php
         $sql = "SELECT * FROM institution";
         $query = mysqli_query($connection,$sql);
@@ -59,11 +64,15 @@ if(!isset($_SESSION['u_id']))
             echo "</select></td></tr><tr><td height='10px'></td></tr>";
         }
     ?>
-</div>
+
 </form>
 </td>
 </tr>
 </table>
+</div>
+<div id="back">
+    <input type="submit" name="back" id="button" value="Nazad">
+</div>
 
 <script>
 
