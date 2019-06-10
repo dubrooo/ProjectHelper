@@ -11,15 +11,7 @@ session_start();
 	<link type="text/css" rel="stylesheet" href="adminLoginForm.css">
    </head>
 <style type="text/css">
-    body {
-        font-family: Calibri;
-    }
 
-    div#warning {
-        display: inline;
-        color: #FF5A36;
-        font-weight: bolder;
-    }
 </style>
 <body>
 
@@ -28,7 +20,8 @@ session_start();
 <table align="center">
 <form name="createLog" method="post" action="adminLogin.php" onsubmit="return checkIt();">
 <tr>
-<td align="center" colspan="2"><h1>Log in</h1></td>
+<div class="titleBar"><h1 align="center">Log in</h1></div>
+<td align="center" height="30px"></td>
 </tr><tr>
 <td><label>Username:</label></td>
 <td><input type="text" name="admUser"></td>
@@ -38,8 +31,8 @@ session_start();
 </tr><tr>
 <td height="20px" colspan="2"><div id="warning"></div></td>
 </tr><tr>
-<td colspan="2" align="center"><input type="submit" name="log" value="Log in">
-<input type="reset" name="reset" value="Cancel"></td>
+<td colspan="2" align="center"><input type="submit" name="log" id="button" value="Log in">
+<input type="reset" name="reset" value="Cancel" id="button"></td>
 </tr>
 </form>
 
