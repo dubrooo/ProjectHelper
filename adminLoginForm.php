@@ -11,7 +11,7 @@ session_start();
    </head>
 <style type="text/css">
     body {
-        font-family: Bahnschrift SemiLight;
+        font-family: Calibri;
     }
 
     div#warning {
@@ -22,27 +22,10 @@ session_start();
 </style>
 <body>
 
-<script>
-    function checkIt() {
-        if (document.logIn.admUser.value.length == 0) {
-            document.getElementById("warning").innerHTML = "Unesite korisničko ime";
-            document.logIn.admUser.style.background = "#FF5A36";
-            return false;
-        }
-        else if (document.logIn.admPassword.value.length < 8) {
-            document.getElementById("warning").innerHTML = "Lozinka mora sadržati minimum 8 karaktera";
-            document.logIn.admPassword.style.background = "#FF5A36";
-            return false;
-        }else{
-            return true;
-        }
-
-    }
-</script>
 
 <!--Log in form-->
 <table align="center">
-<form name="logIn" method="post" action="adminLogin.php" onsubmit="return checkIt();">
+<form name="createLog" method="post" action="adminLogin.php" onsubmit="return checkIt();">
 <tr>
 <td align="center" colspan="2"><h1>Log in</h1></td>
 </tr><tr>
@@ -61,6 +44,7 @@ session_start();
 
 </table>
 
+<script src="adminCreateAndLog.js"></script>
 
 </body>
 </html>
