@@ -16,6 +16,13 @@
         color: #FF5A36;
         font-weight: bolder;
     }
+    #button:hover{
+        background: #186cde;
+        color: #ffffff;
+    }
+    #button{
+        background: #ffffff;
+    }
 </style>
 <body>
 
@@ -43,8 +50,8 @@
     <tr>
 <td></td>
 <td align="center">
-    <input type="submit" name="submitAdmin" value="Create">
-    <input type="reset" name="reset" value="Cancel">
+    <input type="submit" id="button" name="submitAdmin" value="Create">
+    <input type="reset" id="button" name="reset" value="Cancel">
 </td>
 </tr>
 </form>

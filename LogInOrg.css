@@ -35,17 +35,6 @@ body {
 	background-color:#186cde;
 }
 
-a{
-	color:#57616a;
-	text-decoration:none;
-	font-weight:bold;
-}
-
-a:hover{
-	color:#186cde;
-	text-decoration:none;
-	font-weight:bold;
-}
 
     div#warning {
         display: inline;

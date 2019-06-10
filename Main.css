@@ -19,12 +19,20 @@ body {
 
 .sideBar {
 	margin: 0;
-	min-height: 100%;
+
     float:left;
 	width: 200px;
-	height:512px;
+	height: 600px;
 	color:#ffffff;
 	background-color:#186cde;
+}
+.main{
+	padding-left: 40px;
+	padding-top: 40px;
+	min-height: 100%;
+	float:left;
+	width: 600px;
+	height:512px;
 }
 
 .sideBar a{
@@ -37,4 +45,7 @@ body {
 	color:#a1ecce;
 	text-decoration:none;
 	font-weight:bold;
+}
+ul{
+	font-size: xx-large;
 }

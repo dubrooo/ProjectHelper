@@ -32,7 +32,7 @@
 <td height="50px"></td>
 </tr>
 <form name="logIn" method="post" action="LogInOrgDB.php" onsubmit="return checkIt();">
-<tr>
+
 <tr>
 <th colspan="2"><h3>Unesite Vaše podatke:</h3></th>
 </tr>
@@ -54,7 +54,6 @@
 <div id="warning"></div>
 </td>
 </tr>
-<tr>
 
 </form>
 </table>
