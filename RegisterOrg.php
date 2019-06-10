@@ -10,6 +10,7 @@
         color: #FF5A36;
         font-weight: bolder;
     }
+
 </style>
 <body>
 <script>
@@ -50,8 +51,15 @@
 </div>
 
 <!--Register form-->
-<table border="1" align="center">
+
+<table align="center">
 <form name="regOrg" method="post" action="AddOrgDB.php" onsubmit="return checkIt();">
+<tr>
+<td height="50px"></td>
+</tr>
+<tr>
+<th colspan="2"><h3>Unesite Vaše podatke:</h3></th>
+</tr>
 <tr>
 <td align="right"><label>Email:</label></td>
 <td><input type="email" name="orgEmail"></td>
@@ -75,8 +83,8 @@
 <tr>
 <td></td>
 <td>
-<input type="submit" name="orgSubmit" value="Registrujte se">
-<input type="reset" name="orgReset" value="Poništi">
+<input type="submit" name="orgSubmit" id="button" value="Registrujte se">
+<input type="reset" name="orgReset" id="button" value="Poništi">
 </td>
 </tr>
 </form>
