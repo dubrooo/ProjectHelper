@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d284a0c-43c9-4fd0-8d91-ad39e886bbe3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/adminCreateAndLog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CreateAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/CreateAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminLoginForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminLoginForm.php" afterDir="false" />
-    </list>
+    <list default="true" id="9d284a0c-43c9-4fd0-8d91-ad39e886bbe3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,11 +17,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/adminLoginForm.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="127">
-                  <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+                  <caret line="27" column="21" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
@@ -34,8 +29,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/adminCreateAndLog.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+                <state relative-caret-position="136">
+                  <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/LogInOrg.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="187">
+                  <caret line="11" column="8" lean-forward="true" selection-end-line="55" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -57,7 +61,7 @@
             <entry file="file://$PROJECT_DIR$/CreateAdmin.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="110">
-                  <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+                  <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
@@ -97,9 +101,9 @@
         <option value="$PROJECT_DIR$/LogInOrg.php" />
         <option value="$PROJECT_DIR$/AdminSignup.php" />
         <option value="$PROJECT_DIR$/adminLogin.php" />
+        <option value="$PROJECT_DIR$/adminLoginForm.php" />
         <option value="$PROJECT_DIR$/CreateAdmin.php" />
         <option value="$PROJECT_DIR$/adminCreateAndLog.js" />
-        <option value="$PROJECT_DIR$/adminLoginForm.php" />
       </list>
     </option>
   </component>
@@ -152,12 +156,12 @@
       <workItem from="1559664646894" duration="4593000" />
       <workItem from="1559802398224" duration="169000" />
       <workItem from="1560082689446" duration="10658000" />
-      <workItem from="1560148123933" duration="3517000" />
+      <workItem from="1560148123933" duration="4229000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47357000" />
+    <option name="totallyTimeSpent" value="48069000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -415,10 +419,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LogInOrg.php">
+    <entry file="file://$PROJECT_DIR$/adminLoginForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        <state relative-caret-position="127">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -431,15 +435,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adminCreateAndLog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        <state relative-caret-position="136">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adminLoginForm.php">
+    <entry file="file://$PROJECT_DIR$/LogInOrg.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
+        <state relative-caret-position="187">
+          <caret line="11" column="8" lean-forward="true" selection-end-line="55" selection-end-column="7" />
         </state>
       </provider>
     </entry>
