@@ -5,8 +5,8 @@ if(isset($_POST['log'])) {
 	
 	require 'db_config.php';
 	
-	$email = mysqli_real_escape_string($connection, $_POST['email']);
-	$password = mysqli_real_escape_string($connection, $_POST['passwd']);
+	$email = mysqli_real_escape_string($connection, $_POST['orgEmail']);
+	$password = mysqli_real_escape_string($connection, $_POST['orgPassword']);
 	
 	//Check if inputs are empty
 	if (empty($email) || empty($password)) {

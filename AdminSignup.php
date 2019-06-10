@@ -7,8 +7,8 @@ if(isset($_POST['submitAdmin'])) {
 	
 	require 'db_config.php';
 	
-	$adminUsername = mysqli_real_escape_string($connection, $_POST['Uname']);
-	$adminPassword = mysqli_real_escape_string($connection, $_POST['Pass']);
+	$adminUsername = mysqli_real_escape_string($connection, $_POST['admUser']);
+	$adminPassword = mysqli_real_escape_string($connection, $_POST['admPassword']);
 
 	//Check for empty fields
 	if(empty($adminUsername) || empty($adminPassword)) {
