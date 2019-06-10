@@ -11,18 +11,38 @@ if(!isset($_SESSION['u_id']))
     <meta charset="UTF-8">
     <title>Administrator</title>
    </head>
-</body>
+<style type="text/css">
+    body{
+        font-family: Calibri;
+        color: #57616a;
+        margin: 0;
+        background-color: #c8dfff;
+    }
+    fieldset{
+        background-color: #ffffff;
+    }
+    #button:hover{
+        background: #186cde;
+        color: #ffffff;
+    }
+    #button{
+        background: #ffffff;
+    }
+    .topbar{
+        width 100%;
+        margin: 0 auto;
+        height: 70px;
+        background-color: #186cde;
+        position: sticky;
+        top: 0;
+        color: white;
+        font-weight: bold;
+    }
+</style>
+<body>
 
 <!--Header and logout button-->
-<div style="
-    width 100%;
-	margin: 0 auto;
-	background-color: gray;
-    position: sticky;
-	top: 0;
-	color: white;
-	font-weight: bold;
-">
+<div class="topbar">
 <table>
 <tr>
 <td colspan="2">
@@ -71,12 +91,13 @@ Easy Project - administrator page
 <tr>
 <td>
 <form method="post" action="adminLogout.php">
-<input type="submit" name="logout" value="Log Out">
+<input type="submit" id="button" name="logout" value="Log Out">
 </form>
 </td>
 <td>
 <form method="post" action="InstPage.php">
-<input type="submit" name="view" value="Detaljniji pregled">
+<input type="submit" id="button" name="view" value="Detaljniji pregled">
+
 </form>
 </td>
 </tr>
@@ -92,16 +113,17 @@ Easy Project - administrator page
 <form name="AddInstitution" method="post" action="adminPageDB.php">
 <tr>
   <td align="right"><label>Ime institucije:</label></td>
-  <td><input type="text" name="instName"></input></td>
+  <td><input type="text" name="instName"></td>
 </tr><tr>
  <td align="right"><label>Email institucije:</label></td>
-  <td><input type="email" name="instEmail"></input></td>
+  <td><input type="email" name="instEmail"></td>
   </tr><tr>
   <td align="right"><label>Adresa institucije:</label></td>
-  <td><input type="text" name="instAddress"></input></td>
+  <td><input type="text" name="instAddress"></td>
   </tr><tr>
-  <td colspan="2" align="right"><input type="submit" name="addI" value="Dodaj novu instituciju"></input>
-  <input type="reset" name="cancel" value="Odbaci"></input></td>
+  <td colspan="2" align="right">
+      <input type="submit" id="button" name="addI" value="Dodaj novu instituciju">
+      <input type="reset" id="button" name="cancel" value="Odbaci"></td>
 </form>
 </table>
 </fieldset>
@@ -119,10 +141,11 @@ Easy Project - administrator page
 <form name="DeleteInstitution" method="post" action="adminPageDB.php">
 <tr>
   <td align="right"><label>ID institucije:</label></td>
-  <td><input type="text" name="instID" size="3"></input></td>
+  <td><input type="text" name="instID" size="3"></td>
 </tr><tr>
-  <td colspan="2" align="right"><input type="submit" name="deleteI" value="Izbriši"></input>
-  <input type="reset" name="cancel2" value="Odbaci"></input></td>
+  <td colspan="2" align="right">
+      <input type="submit" id="button" name="deleteI" value="Izbriši"></input>
+      <input type="reset" id="button" name="cancel2" value="Odbaci"></td>
 </form>
 </table>
 </fieldset>
@@ -139,21 +162,22 @@ Easy Project - administrator page
 <form name="ChangeInstitution" method="post" action="adminPageDB.php">
 <tr>
   <td align="right"><label>Unesi ID institucije koju želite da izmenite:</label></td>
-  <td colspan="3" align="left"><input type="text" name="instID2" size="3"></input></td>
+  <td colspan="3" align="left"><input type="text" name="instID2" size="3"></td>
 </tr><tr>
 <td colspan="3" height="20px"></td>
 </tr><tr>
     <td align="right"><label>Novo ime:</label></td>
-  <td><input type="text" name="instNameNew"></input></td>
+  <td><input type="text" name="instNameNew"></td>
   </tr><tr>
       <td align="right"><label>Novi email:</label></td>
-  <td><input type="text" name="instEmailNew"></input></td>
+  <td><input type="text" name="instEmailNew"></td>
   </tr><tr>
         <td align="right"><label>Nova adresa:</label></td>
-  <td><input type="text" name="instAddressNew"></input></td>
+  <td><input type="text" name="instAddressNew"></td>
   </tr><tr>
-  <td colspan="3" align="right"><input type="submit" name="changeI" value="Izmeni"></input>
-  <input type="reset" name="cancel3" value="Odbaci"></input></td>
+  <td colspan="3" align="right">
+      <input type="submit" id="button" name="changeI" value="Izmeni">
+      <input type="reset" id="button" name="cancel3" value="Odbaci"></td>
 </form>
 </table>
 </fieldset>
@@ -168,22 +192,23 @@ Easy Project - administrator page
 <form name="AddCompetition" method="post" action="adminPageDB.php">
 <tr>
   <td align="right"><label>ID institucije:</label></td>
-  <td><input type="text" name="instID3"></input></td>
+  <td><input type="text" name="instID3"></td>
 </tr><tr>
   <td align="right"><label>Ime konkursa:</label></td>
-  <td><input type="text" name="compName"></input></td>
+  <td><input type="text" name="compName"></td>
 </tr><tr>
   <td align="right"><label>Tip:</label></td>
-  <td><input type="text" name="compType"></input></td>
+  <td><input type="text" name="compType"></td>
 </tr><tr>
   <td align="right"><label>Polje rada:</label></td>
-  <td><input type="text" name="compField"></input></td>
+  <td><input type="text" name="compField"></td>
 </tr><tr>
   <td align="right"><label>Opis:</label></td>
   <td><textarea name="compDesc" rows="10" cols="50" style="resize:none;"></textarea></td>
 </tr><tr>
-  <td colspan="2" align="right"><input type="submit" name="addC" value="Dodaj novi konkurs"></input>
-  <input type="reset" name="cancel" value="Odbaci"></input></td>
+  <td colspan="2" align="right">
+      <input type="submit" id="button" name="addC" value="Dodaj novi konkurs">
+      <input type="reset" id="button" name="cancel" value="Odbaci"></td>
 </form>
 </table>
 </fieldset>
@@ -200,10 +225,11 @@ Easy Project - administrator page
 <form name="DeleteInstitution" method="post" action="adminPageDB.php">
 <tr>
   <td align="right"><label>ID konkursa:</label></td>
-  <td><input type="text" name="compID" size="3"></input></td>
+  <td><input type="text" name="compID" size="3"></td>
 </tr><tr>
-  <td colspan="2" align="right"><input type="submit" name="deleteC" value="Izbriši"></input>
-  <input type="reset" name="cancel2" value="Odbaci"></input></td>
+  <td colspan="2" align="right">
+      <input type="submit" id="button" name="deleteC" value="Izbriši">
+      <input type="reset" id="button" name="cancel2" value="Odbaci"></td>
 </form>
 </table>
 </fieldset>
@@ -220,24 +246,25 @@ Easy Project - administrator page
 <form name="ChangeCompetition" method="post" action="adminPageDB.php">
 <tr>
   <td align="right"><label>Unesi ID konkursa koji želite da izmenite:</label></td>
-  <td colspan="3" align="left"><input type="text" name="compID2" size="3"></input></td>
+  <td colspan="3" align="left"><input type="text" name="compID2" size="3"></td>
 </tr><tr>
 <td colspan="3" height="20px"></td>
 </tr><tr>
     <td align="right"><label>Novo ime:</label></td>
-  <td><input type="text" name="compNameNew"></input></td>
+  <td><input type="text" name="compNameNew"></td>
   </tr><tr>
     <td align="right"><label>Novi tip:</label></td>
-  <td><input type="text" name="compTypeNew"></input></td>
+  <td><input type="text" name="compTypeNew"></td>
   </tr><tr>
       <td align="right"><label>Novo polje aktivnosti:</label></td>
-  <td><input type="text" name="compFieldNew"></input></td>
+  <td><input type="text" name="compFieldNew"></td>
   </tr><tr>
     <td align="right"><label>Novi opis:</label></td>
   <td><textarea name="compDescNew" rows="10" cols="50" style="resize:none;"></textarea></td>
 </tr><tr>
-  <td colspan="3" align="right"><input type="submit" name="changeC" value="Izmeni"></input>
-  <input type="reset" name="cancel3" value="Odbaci"></input></td>
+  <td colspan="3" align="right">
+      <input type="submit" id="button" name="changeC" value="Izmeni">
+      <input type="reset" id="button" name="cancel3" value="Odbaci"></td>
 </form>
 </table>
 </fieldset>
@@ -253,13 +280,14 @@ Easy Project - administrator page
 <form name="Assign" method="post" action="adminPageDB.php">
 <tr>
   <td align="right"><label>ID organizacije:</label></td>
-  <td colspan="3" align="left"><input type="text" name="IDOrg" size="3"></input></td>
+  <td colspan="3" align="left"><input type="text" name="IDOrg" size="3"></td>
 </tr><tr>
     <td align="right"><label>ID skraćenog konkursa:</label></td>
-  <td><input type="text" name="IDSComp" size="3"></input></td>
+  <td><input type="text" name="IDSComp" size="3"></td>
   </tr><tr>
-  <td colspan="3" align="right"><input type="submit" name="assignC" value="Dodeli"></input>
-  <input type="reset" name="cancel3" value="Odbaci"></input></td>
+  <td colspan="3" align="right">
+      <input type="submit" id="button" name="assignC" value="Dodeli">
+      <input type="reset" id="button" name="cancel3" value="Odbaci"></td>
   </tr>
 </form>
 </table>
@@ -276,10 +304,11 @@ Easy Project - administrator page
 <form name="DeleteAssignment" method="post" action="adminPageDB.php">
 <tr>
   <td align="right"><label>ID dodele:</label></td>
-  <td><input type="text" name="IDAssi" size="3"></input></td>
+  <td><input type="text" name="IDAssi" size="3"></td>
 </tr><tr>
-  <td colspan="2" align="right"><input type="submit" name="deleteA" value="Izbriši"></input>
-  <input type="reset" name="cancel2" value="Odbaci"></input></td>
+  <td colspan="2" align="right">
+      <input type="submit" id="button" name="deleteA" value="Izbriši">
+      <input type="reset" id="button" name="cancel2" value="Odbaci"></td>
 </form>
 </table>
 </fieldset>
@@ -461,21 +490,7 @@ while ($row1 = mysqli_fetch_array($query1)){
 </table>
 </div>
 
-<script>
-
-    function mouseOver(obj)
-    {
-        obj.style.backgroundColor = "#e98";
-    }
-    function mouseOut(obj2)
-    {
-        obj2.style.backgroundColor = "#fff";
-    }
-
-    function toPage_adminPageI(src) {
-        window.location=src;
-    }
-    
+<script src="adminPageII.js">
     var input = document.querySelector('input[name="compID2"]');
     var compName = document.querySelector('input[name="compNameNew"]');
     var compType = document.querySelector('input[name="compTypeNew"]');
